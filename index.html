@@ -24,58 +24,15 @@
         </nav>
     </header>
 
-    <!-- Main content -->
-    <main>
-        <h1>Welcome to Power Smart Australia</h1>
-        <p>Learn about appliance energy consumption in Australian homes and save money on your electricity bills.</p>
-
-        <div class="info-section">
-            <h2>Australian Energy Facts</h2>
-            <div class="facts-grid">
-                <div class="fact-card">
-                    <h3>Average Household</h3>
-                    <p>Uses 6,200 kWh per year</p>
-                </div>
-                <div class="fact-card">
-                    <h3>Average Bill</h3>
-                    <p>$1,800 per year</p>
-                </div>
-                <div class="fact-card">
-                    <h3>Potential Savings</h3>
-                    <p>Up to $400 per year</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="info-section">
-            <h2>Top Energy Using Appliances</h2>
-            <div class="appliance-list">
-                <div class="appliance-item">
-                    <h3>🏠 Air Conditioning</h3>
-                    <p>Uses 40% of household energy. Set to 24°C in summer to save money.</p>
-                </div>
-                <div class="appliance-item">
-                    <h3>🌊 Water Heating</h3>
-                    <p>Uses 25% of household energy. Consider solar hot water systems.</p>
-                </div>
-                <div class="appliance-item">
-                    <h3>📺 Television</h3>
-                    <p>Uses 8% of household energy. Turn off at the wall when not in use.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="tips-section">
-            <h2>Simple Energy Saving Tips</h2>
-            <ul class="tips-list">
-                <li>Turn off lights when leaving a room</li>
-                <li>Use LED light bulbs instead of old bulbs</li>
-                <li>Turn appliances off at the wall, not just standby</li>
-                <li>Close curtains in summer to keep heat out</li>
-                <li>Only run dishwasher and washing machine when full</li>
-            </ul>
-        </div>
-    </main>
+    <h1>Appliance Energy Consumption</h1>
+    <div id="content"></div>
+    
+    <!-- Give the SVG a size so shapes can be seen -->
+    <svg width="300" height="150"></svg>
+    
+    <!-- Load D3 first, then your D3 code file -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="energy-d3.js"></script>
 
     <!-- Footer -->
     <footer>
