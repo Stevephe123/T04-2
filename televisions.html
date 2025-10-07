@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Television Energy Guide - Power Smart Australia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header with logo and navigation -->
+    <header>
+        <div class="logo" onclick="goHome()">
+            <img src="PowerIcon.png" alt="Power Smart Logo">
+            <span>Power Smart Australia</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="televisions.html" class="nav-link active">Televisions</a></li>
+                <li><a href="about.html" class="nav-link">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <h1>Television Energy Guide</h1>
+        <p>Learn how much energy different TVs use and how to save money.</p>
+
+        <div class="info-section">
+            <h2>TV Energy Use in Australia</h2>
+            <div class="tv-stats">
+                <div class="stat">
+                    <h3>2.2 TVs</h3>
+                    <p>per Australian home</p>
+                </div>
+                <div class="stat">
+                    <h3>5 hours</h3>
+                    <p>average daily watching</p>
+                </div>
+                <div class="stat">
+                    <h3>$50-$200</h3>
+                    <p>yearly electricity cost</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2>TV Types and Energy Use</h2>
+            <table class="simple-table">
+                <tr>
+                    <th>TV Size</th>
+                    <th>Type</th>
+                    <th>Power Use</th>
+                    <th>Yearly Cost</th>
+                </tr>
+                <tr onclick="selectRow(this)">
+                    <td>32 inch</td>
+                    <td>LED</td>
+                    <td>50 watts</td>
+                    <td>$51</td>
+                </tr>
+                <tr onclick="selectRow(this)">
+                    <td>43 inch</td>
+                    <td>LED</td>
+                    <td>80 watts</td>
+                    <td>$82</td>
+                </tr>
+                <tr onclick="selectRow(this)">
+                    <td>55 inch</td>
+                    <td>OLED</td>
+                    <td>140 watts</td>
+                    <td>$143</td>
+                </tr>
+                <tr onclick="selectRow(this)">
+                    <td>65 inch</td>
+                    <td>LED</td>
+                    <td>180 watts</td>
+                    <td>$184</td>
+                </tr>
+            </table>
+            <p><em>*Based on 5 hours daily use at 28 cents per kWh</em></p>
+        </div>
+
+        <div class="info-section">
+            <h2>Simple TV Energy Calculator</h2>
+            <div class="calculator">
+                <label for="tv-watts">TV power use (watts):</label>
+                <input type="number" id="tv-watts" placeholder="Enter watts (e.g. 100)">
+
+                <label for="daily-hours">Hours used per day:</label>
+                <input type="number" id="daily-hours" placeholder="Enter hours (e.g. 5)">
+
+                <button onclick="calculateCost()">Calculate Yearly Cost</button>
+
+                <div id="result" class="result-box" style="display: none;">
+                    <h3>Your TV costs <span id="yearly-cost">$0</span> per year to run</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h2>TV Energy Saving Tips</h2>
+            <ul class="tips-list">
+                <li>Turn TV off at the wall when not watching</li>
+                <li>Lower the TV brightness to save energy</li>
+                <li>Choose smaller TVs for bedrooms</li>
+                <li>Look for high Energy Star ratings when buying</li>
+                <li>Use sleep timer so TV turns off automatically</li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Power Smart Australia | Created by Po Horng En</p>
+        <p>GenAI Acknowledgment: GitHub Copilot helped with some code generation</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
