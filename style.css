@@ -1,27 +1,28 @@
-/* === Reset Basic Styles === */
+/* === RESET === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* === Body Styling === */
+/* === BODY === */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: #f4f4f4;
+    background: #f7f8fa;
 }
 
-/* === Header + Navigation Bar === */
+/* === HEADER === */
 header {
     background: linear-gradient(90deg, #4a90e2, #7b68ee);
     color: white;
-    padding: 1rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Logo */
@@ -30,28 +31,29 @@ header {
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
 .logo img {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     background: white;
     padding: 5px;
-}
-
-.logo:hover {
-    transform: scale(1.05);
     transition: transform 0.3s;
 }
 
-/* Nav Menu */
+.logo:hover img {
+    transform: scale(1.05);
+}
+
+/* === NAVIGATION === */
 nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -59,11 +61,12 @@ nav ul li a {
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 5px;
+    font-weight: 500;
     transition: background 0.3s;
 }
 
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.25);
 }
 
 nav ul li a.active {
@@ -71,44 +74,63 @@ nav ul li a.active {
     font-weight: bold;
 }
 
-/* === Heading and Content Area === */
-h1 {
-    text-align: left;
-    color: #333;
-    margin-top: 20px;
+/* === MAIN CONTENT === */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+main h1,
+main h2 {
+    color: #004f7c;
     margin-bottom: 10px;
-    /* reduced gap under heading */
 }
 
-/* Collapse empty div */
-#content {
-    height: 0;
-    margin: 0;
-    padding: 0;
+main p {
+    margin-bottom: 15px;
+    color: #444;
 }
 
-/* === Old SVG (from T04-2) === */
-svg {
-    display: block;
-    margin: 0 auto;
-    margin-top: 0;
-    border: none;
+/* === HIGHLIGHT BOX (used in index.html “Quick facts”) === */
+section {
+    margin-bottom: 30px;
 }
 
-/* === Responsive SVG Container (T04-3) === */
+section ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+section ul li {
+    margin: 6px 0;
+}
+
+section h2 {
+    color: #222;
+    margin-bottom: 8px;
+}
+
+section[style*="background:#fffdf8"],
+.quick-facts {
+    background: #fffdf8;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+/* === RESPONSIVE CHART CONTAINER (T04–T05) === */
 .responsive-svg-container {
-    margin: 10px auto;
-    /* small margin around chart */
+    margin: 20px auto;
     width: 100%;
-    /* fill screen width */
-    max-width: 1200px;
-    /* cap width for large monitors */
+    max-width: 1000px;
     background: #fff;
-    /* white background behind chart */
     border: 1px solid #ccc;
-    /* light border */
     padding: 10px;
-    /* space inside border */
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
@@ -119,20 +141,53 @@ svg {
     display: block;
 }
 
-/* === Footer === */
+/* === INFO SECTIONS (About Page) === */
+.info-section {
+    margin-top: 30px;
+}
+
+.info-section h2 {
+    color: #004f7c;
+    margin-bottom: 10px;
+}
+
+.reasons-list,
+.impact-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.reason-item,
+.impact-item {
+    flex: 1;
+    min-width: 250px;
+    background: #f9f9ff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.reason-item h3,
+.impact-item h3 {
+    color: #004f7c;
+}
+
+/* === FOOTER === */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 0.9rem;
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 4px 0;
 }
 
+/* === BAR CHART (D3) === */
 .bar {
     fill: steelblue;
     transition: fill 0.3s;
@@ -140,4 +195,22 @@ footer p {
 
 .bar:hover {
     fill: darkorange;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
 }

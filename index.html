@@ -9,9 +9,9 @@
 </head>
 
 <body>
-    <!-- Header with logo and navigation -->
+    <!-- Header -->
     <header>
-        <div class="logo" onclick="goHome()">
+        <div class="logo" onclick="location.href='index.html'">
             <img src="PowerIcon.png" alt="Power Smart Logo">
             <span>Power Smart Australia</span>
         </div>
@@ -24,30 +24,34 @@
         </nav>
     </header>
 
-  <!-- Existing content -->
-  <h1>Appliance Energy Consumption</h1>
-  <!-- <svg width="300" height="150"></svg> -->
+    <!-- Main Content -->
+    <main
+        style="max-width:900px; margin:40px auto; padding:20px; background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h1 style="color:#004f7c;">Appliance Energy Use in Australia</h1>
+        <p style="margin-top:10px; margin-bottom:25px;">
+            This site gives a simple overview of household appliance energy consumption in the Australian market.
+        </p>
 
-  <!-- ✅ NEW: Responsive chart container -->
-  <div class="responsive-svg-container"></div>
+        <section style="background:#fffdf8; border:1px solid #eee; border-radius:8px; padding:20px;">
+            <h2 style="color:#333;">Quick facts</h2>
+            <ul style="margin-top:10px; margin-left:20px; line-height:1.8;">
+                <li>Energy labels (star ratings) help compare appliance efficiency at a glance.</li>
+                <li>Standby power can add unexpected costs—turn devices fully off when not in use.</li>
+                <li>Choosing higher-efficiency models usually pays back through lower electricity bills.</li>
+            </ul>
+        </section>
+    </main>
 
-  <!-- ✅ Footer stays last -->
-  <footer>
-    <p>&copy; 2024 Power Smart Australia | Created by Po Horng En</p>
-    <p>GenAI Acknowledgment: GitHub Copilot helped with some code generation</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Power Smart Australia | Created by Po Horng En</p>
+        <p>Built with assistance from GenAI for starter code/content</p>
+    </footer>
 
-  <!-- Scripts -->
-  <!-- <script src="script.js"></script> -->
-  <!-- D3 library -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <!-- NEW: T04-4 loader -->
-  <script src="t04-4-load.js"></script>
-  <!-- ✅ T04-5: Define createBarChart() and draw bars -->
-  <script src="t04-5-bars.js"></script>
-  <!-- <script src="t04-3-bars.js"></script> -->
-  <!-- <script src="energy-d3.js"></script> -->
+    <!-- D3 Scripts -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/t04-4-load.js"></script>
+    <script src="js/t04-7-bars.js"></script>
 </body>
-
 
 </html>

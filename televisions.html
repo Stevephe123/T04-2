@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Television Energy Guide - Power Smart Australia</title>
+    <title>Television Energy Insights - Power Smart Australia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Header with logo and navigation -->
+    <!-- Header -->
     <header>
-        <div class="logo" onclick="goHome()">
+        <div class="logo" onclick="location.href='index.html'">
             <img src="PowerIcon.png" alt="Power Smart Logo">
             <span>Power Smart Australia</span>
         </div>
@@ -24,102 +24,101 @@
         </nav>
     </header>
 
-    <!-- Main content -->
-    <main>
-        <h1>Television Energy Guide</h1>
-        <p>Learn how much energy different TVs use and how to save money.</p>
+    <!-- Main Content -->
+    <main
+        style="max-width:1000px; margin:40px auto; padding:20px; background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
 
-        <div class="info-section">
-            <h2>TV Energy Use in Australia</h2>
-            <div class="tv-stats">
-                <div class="stat">
-                    <h3>2.2 TVs</h3>
-                    <p>per Australian home</p>
-                </div>
-                <div class="stat">
-                    <h3>5 hours</h3>
-                    <p>average daily watching</p>
-                </div>
-                <div class="stat">
-                    <h3>$50-$200</h3>
-                    <p>yearly electricity cost</p>
-                </div>
-            </div>
-        </div>
+        <h1 style="color:#004f7c;">Television Energy Tips</h1>
+        <p style="margin-bottom:20px;">
+            Size & technology matter. Larger screens and older tech (e.g., plasma) use more energy.
+            Modern LED/LCD and OLED sets are generally more efficient.
+        </p>
 
-        <div class="info-section">
-            <h2>TV Types and Energy Use</h2>
-            <table class="simple-table">
-                <tr>
-                    <th>TV Size</th>
-                    <th>Type</th>
-                    <th>Power Use</th>
-                    <th>Yearly Cost</th>
-                </tr>
-                <tr onclick="selectRow(this)">
-                    <td>32 inch</td>
-                    <td>LED</td>
-                    <td>50 watts</td>
-                    <td>$51</td>
-                </tr>
-                <tr onclick="selectRow(this)">
-                    <td>43 inch</td>
-                    <td>LED</td>
-                    <td>80 watts</td>
-                    <td>$82</td>
-                </tr>
-                <tr onclick="selectRow(this)">
-                    <td>55 inch</td>
-                    <td>OLED</td>
-                    <td>140 watts</td>
-                    <td>$143</td>
-                </tr>
-                <tr onclick="selectRow(this)">
-                    <td>65 inch</td>
-                    <td>LED</td>
-                    <td>180 watts</td>
-                    <td>$184</td>
-                </tr>
-            </table>
-            <p><em>*Based on 5 hours daily use at 28 cents per kWh</em></p>
-        </div>
+        <ul style="margin-left:20px; line-height:1.8;">
+            <li>Use the TV’s Energy Saver or Eco mode and reduce brightness where comfortable.</li>
+            <li>Disable “always-listening” voice features if unused — they can add standby draw.</li>
+            <li>Check the star rating and annual kWh on the energy label before purchasing.</li>
+        </ul>
 
-        <div class="info-section">
-            <h2>Simple TV Energy Calculator</h2>
-            <div class="calculator">
-                <label for="tv-watts">TV power use (watts):</label>
-                <input type="number" id="tv-watts" placeholder="Enter watts (e.g. 100)">
+        <p style="margin-top:10px; font-style:italic; color:#666;">
+            Example: A 32-inch LED TV uses ~60kWh/year, while a 65-inch OLED may use ~180kWh/year.
+        </p>
 
-                <label for="daily-hours">Hours used per day:</label>
-                <input type="number" id="daily-hours" placeholder="Enter hours (e.g. 5)">
+        <hr style="margin:30px 0; border:none; border-top:1px solid #ddd;">
 
-                <button onclick="calculateCost()">Calculate Yearly Cost</button>
+        <h2 style="color:#004f7c;">TV Energy Insights: Data Story</h2>
+        <p style="margin-bottom:20px;">
+            This section presents findings from the Australian Government’s
+            <strong>Television Energy Rating dataset</strong>.
+            The aim is to help Australian consumers make informed decisions about technology, size, brand, and
+            efficiency.
+        </p>
 
-                <div id="result" class="result-box" style="display: none;">
-                    <h3>Your TV costs <span id="yearly-cost">$0</span> per year to run</h3>
-                </div>
-            </div>
-        </div>
+        <!-- Chart 1 -->
+        <section class="chart-section">
+            <h3>Chart 1: What TV technologies are most common?</h3>
+            <p><strong>Pie Chart</strong></p>
+            <img src="Q1Pie Chart.png" alt="Chart 1 - TV technologies" class="chart-image">
+            <p class="chart-caption">Most TVs in Australia are LCD LED, while OLED is less common.</p>
+        </section>
 
-        <div class="tips-section">
-            <h2>TV Energy Saving Tips</h2>
-            <ul class="tips-list">
-                <li>Turn TV off at the wall when not watching</li>
-                <li>Lower the TV brightness to save energy</li>
-                <li>Choose smaller TVs for bedrooms</li>
-                <li>Look for high Energy Star ratings when buying</li>
-                <li>Use sleep timer so TV turns off automatically</li>
-            </ul>
-        </div>
+        <!-- Chart 2 -->
+        <section class="chart-section">
+            <h3>Chart 2: What screen sizes are most frequent?</h3>
+            <p><strong>Bar Chart</strong></p>
+            <img src="Q2Bar Chart.png" alt="Chart 2 - TV screen sizes" class="chart-image">
+            <p class="chart-caption">55-inch TVs are the most common, followed by mid-range 42–50 inch models.</p>
+        </section>
+
+        <!-- Chart 3 -->
+        <section class="chart-section">
+            <h3>Chart 3: Which brands dominate the market?</h3>
+            <p><strong>Bar Chart</strong></p>
+            <img src="Q3Bar Chart.png" alt="Chart 3 - TV brands" class="chart-image">
+            <p class="chart-caption">Samsung, Kogan, and LG dominate the Australian market.</p>
+        </section>
+
+        <!-- Chart 4 -->
+        <section class="chart-section">
+            <h3>Chart 4: Which screen type uses the least power?</h3>
+            <p><strong>Bar Chart</strong></p>
+            <img src="Q4Bar Chart.png" alt="Chart 4 - TV efficiency" class="chart-image">
+            <p class="chart-caption">LCD TVs use the least power, while OLEDs use slightly more but offer higher
+                quality.</p>
+        </section>
+
+        <!-- Chart 5 -->
+        <section class="chart-section">
+            <h3>Chart 5: What is the relationship between screen size and power use?</h3>
+            <p><strong>Scatter Plot</strong></p>
+            <img src="Q5Scatter Plot.png" alt="Chart 5 - Power vs screen size" class="chart-image">
+            <p class="chart-caption">Larger TVs consume more power — a clear positive correlation.</p>
+        </section>
+
+        <!-- Chart 6 -->
+        <section class="chart-section">
+            <h3>Chart 6: What is the relationship between star rating and screen size?</h3>
+            <p><strong>Scatter Plot</strong></p>
+            <img src="Q6Scatter Plot.png" alt="Chart 6 - Star rating vs size" class="chart-image">
+            <p class="chart-caption">Star ratings are fairly distributed — large TVs can still be efficient if designed
+                well.</p>
+        </section>
+
+        <hr style="margin:40px 0; border:none; border-top:1px solid #ddd;">
+
+        <h2 style="color:#004f7c;">Conclusion</h2>
+        <p>
+            When choosing a TV, balance size, brand, and efficiency.
+            A <strong>55-inch LED TV</strong> is common and energy-smart for most households.
+        </p>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Power Smart Australia | Created by Po Horng En</p>
-        <p>GenAI Acknowledgment: GitHub Copilot helped with some code generation</p>
+        <p>&copy; 2025 Power Smart Australia | Created by Po Horng En</p>
+        <p>Built with assistance from GenAI for starter code/content</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 
 </html>
