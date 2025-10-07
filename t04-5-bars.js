@@ -1,16 +1,36 @@
 // t04-5-bars.js
 const createBarChart = (data) => {
+    const viewW = 500, viewH = 1600;
+    const displayW = 640, displayH = 420;
+
     const svg = d3.select(".responsive-svg-container")
         .append("svg")
-        .attr("viewBox", "0 0 1200 400")
+        .attr("viewBox", `0 0 ${viewW} ${viewH}`)
+        .attr("width", displayW)
+        .attr("height", displayH)
         .style("border", "1px solid black");
 
+    // X scale (numeric)
+    const xMax = d3.max(data, d => d.count);
+    const xScale = d3.scaleLinear()
+        .domain([0, xMax])
+        .range([0, viewW]);
+
+    // Y scale (categorical)
+    const yScale = d3.scaleBand()
+        .domain(data.map(d => d.brand))
+        .range([0, viewH])
+        .paddingInner(0.2)
+        .paddingOuter(0.1);
+
+    // Bars
     svg.selectAll("rect")
         .data(data)
         .join("rect")
         .attr("class", d => `bar bar-${d.count}`)
-        .attr("width", d => d.count)
-        .attr("height", 16)
-        .attr("x", 0)                    // all bars start from the left
-        .attr("y", (d, i) => i * 25);    // space them 25 px apart vertically
+        .attr("x", 0)
+        .attr("y", d => yScale(d.brand))
+        .attr("width", d => xScale(d.count))
+        .attr("height", yScale.bandwidth())
+        .attr("fill", "steelblue");
 };
