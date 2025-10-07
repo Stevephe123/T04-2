@@ -1,15 +1,11 @@
-/* Stub: will draw the chart in T04-5 */
-function createBarChart(data) {
-    console.log("createBarChart received", data.length, "rows");
-}
-
+// t04-4-load.js
 /* Load CSV, Convert Type, Quick Check */
 d3.csv("data/tvBrandCount.csv", d => ({
     brand: d.brand,
     count: +d.count
 })).then(data => {
     // Quick checks
-    console.log(data); // full array
+    console.log("✅ Data loaded:", data);
     console.log("rows:", data.length);
     console.log("max:", d3.max(data, d => d.count));
     console.log("min:", d3.min(data, d => d.count));
