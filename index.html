@@ -24,23 +24,25 @@
         </nav>
     </header>
 
-    <h1>Appliance Energy Consumption</h1>
-    <div id="content"></div>
-    
-    <!-- Give the SVG a size so shapes can be seen -->
-    <svg width="300" height="150"></svg>
-    
-    <!-- Load D3 first, then your D3 code file -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="energy-d3.js"></script>
+  <!-- Existing content -->
+  <h1>Appliance Energy Consumption</h1>
+  <!-- <svg width="300" height="150"></svg> -->
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Power Smart Australia | Created by Po Horng En</p>
-        <p>GenAI Acknowledgment: GitHub Copilot helped with some code generation</p>
-    </footer>
+  <!-- ✅ NEW: Responsive chart container -->
+  <div class="responsive-svg-container"></div>
 
-    <script src="script.js"></script>
+  <!-- ✅ Footer stays last -->
+  <footer>
+    <p>&copy; 2024 Power Smart Australia | Created by Po Horng En</p>
+    <p>GenAI Acknowledgment: GitHub Copilot helped with some code generation</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="t04-3-bars.js"></script>
+  <!-- <script src="energy-d3.js"></script> -->
 </body>
+
 
 </html>

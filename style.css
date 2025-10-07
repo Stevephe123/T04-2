@@ -1,13 +1,11 @@
-/* Simple CSS for Power Smart Australia */
-
-/* Reset basic styles */
+/* === Reset Basic Styles === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* === Body Styling === */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -15,7 +13,7 @@ body {
     background: #f4f4f4;
 }
 
-/* Header styling */
+/* === Header + Navigation Bar === */
 header {
     background: linear-gradient(90deg, #4a90e2, #7b68ee);
     color: white;
@@ -23,9 +21,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-/* Logo styling */
+/* Logo */
 .logo {
     display: flex;
     align-items: center;
@@ -48,7 +47,7 @@ header {
     transition: transform 0.3s;
 }
 
-/* Navigation styling */
+/* Nav Menu */
 nav ul {
     list-style: none;
     display: flex;
@@ -72,335 +71,65 @@ nav ul li a.active {
     font-weight: bold;
 }
 
-/* Main content styling */
-main {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Headings */
-/* h1 {
-    color: #4a90e2;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-}
-
-h2 {
-    color: #7b68ee;
-    margin: 30px 0 15px 0;
-    font-size: 1.8rem;
-}
-
-h3 {
-    color: #4a90e2;
-    margin-bottom: 10px;
-} */
-
-/* Paragraphs */
-p {
-    margin-bottom: 15px;
-    text-align: justify;
-}
-
-/* Info sections */
-.info-section {
-    margin: 30px 0;
-    padding: 20px 0;
-}
-
-/* Facts grid for home page */
-.facts-grid {
-    display: flex;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.fact-card {
-    flex: 1;
-    background: #e8f4f8;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    border-left: 4px solid #4a90e2;
-}
-
-.fact-card h3 {
-    margin-bottom: 10px;
-    color: #4a90e2;
-}
-
-/* Appliance list */
-.appliance-list {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.appliance-item {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid #7b68ee;
-}
-
-.appliance-item h3 {
-    margin-bottom: 8px;
-    color: #7b68ee;
-}
-
-/* TV stats */
-.tv-stats {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.stat {
-    text-align: center;
-    padding: 20px;
-    background: #e8f4f8;
-    border-radius: 8px;
-    min-width: 150px;
-}
-
-.stat h3 {
-    font-size: 1.5rem;
-    color: #4a90e2;
-    margin-bottom: 5px;
-}
-
-/* Simple table */
-.simple-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-    background: white;
-}
-
-.simple-table th {
-    background: #4a90e2;
-    color: white;
-    padding: 12px;
+/* === Heading and Content Area === */
+h1 {
     text-align: left;
-}
-
-.simple-table td {
-    padding: 12px;
-    border-bottom: 1px solid #ddd;
-}
-
-.simple-table tr {
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.simple-table tr:hover {
-    background: #f0f8ff;
-}
-
-.simple-table tr.selected {
-    background: #e8f4f8;
-    font-weight: bold;
-}
-
-/* Calculator styling */
-.calculator {
-    background: #f0f8ff;
-    padding: 20px;
-    border-radius: 8px;
-    margin: 20px 0;
-}
-
-.calculator label {
-    display: block;
-    margin: 15px 0 5px 0;
-    font-weight: bold;
     color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    /* reduced gap under heading */
 }
 
-.calculator input {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.calculator input:focus {
-    border-color: #4a90e2;
-    outline: none;
-}
-
-.calculator button {
-    background: #4a90e2;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-.calculator button:hover {
-    background: #357abd;
-}
-
-.result-box {
-    background: #d4edda;
-    border: 1px solid #c3e6cb;
-    color: #155724;
-    padding: 15px;
-    border-radius: 5px;
-    margin-top: 15px;
-    text-align: center;
-}
-
-.result-box h3 {
-    color: #155724;
+/* Collapse empty div */
+#content {
+    height: 0;
     margin: 0;
+    padding: 0;
 }
 
-/* Tips sections */
-.tips-section {
-    background: #fff8e1;
-    padding: 20px;
+/* === Old SVG (from T04-2) === */
+svg {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0;
+    border: none;
+}
+
+/* === Responsive SVG Container (T04-3) === */
+.responsive-svg-container {
+    margin: 10px auto;
+    /* small margin around chart */
+    width: 100%;
+    /* fill screen width */
+    max-width: 1200px;
+    /* cap width for large monitors */
+    background: #fff;
+    /* white background behind chart */
+    border: 1px solid #ccc;
+    /* light border */
+    padding: 10px;
+    /* space inside border */
     border-radius: 8px;
-    margin: 30px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.tips-list {
-    list-style: none;
-    padding-left: 0;
+.responsive-svg-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.tips-list li {
-    padding: 8px 0;
-    padding-left: 25px;
-    position: relative;
-}
-
-.tips-list li:before {
-    content: "💡";
-    position: absolute;
-    left: 0;
-    top: 8px;
-}
-
-/* About page specific */
-.reasons-list {
-    display: flex;
-    gap: 20px;
-    margin: 20px 0;
-}
-
-.reason-item {
-    flex: 1;
-    background: #f0f8ff;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-}
-
-.context-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.context-list li {
-    padding: 5px 0;
-    padding-left: 20px;
-    position: relative;
-}
-
-.context-list li:before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: #4a90e2;
-    font-weight: bold;
-}
-
-.impact-stats {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.impact-item {
-    text-align: center;
-    background: #e8f4f8;
-    padding: 20px;
-    border-radius: 8px;
-    min-width: 120px;
-}
-
-.impact-item h3 {
-    font-size: 1.8rem;
-    color: #4a90e2;
-    margin-bottom: 5px;
-}
-
-.contact-info {
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    line-height: 1.8;
-}
-
-/* Footer */
+/* === Footer === */
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
+    font-size: 0.9rem;
 }
 
 footer p {
     margin: 5px 0;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        gap: 10px;
-    }
-
-    .facts-grid,
-    .tv-stats,
-    .reasons-list,
-    .impact-stats {
-        flex-direction: column;
-    }
-
-    main {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    .simple-table {
-        font-size: 0.9rem;
-    }
-
-    .simple-table th,
-    .simple-table td {
-        padding: 8px;
-    }
-}
